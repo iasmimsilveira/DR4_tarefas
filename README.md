@@ -1,16 +1,27 @@
-Parrot Refactoring Kata Java version
-====================================
+# 🦜 Parrot Refactoring Kata - Java
 
-Parrot Refactoring Kata.
+Este projeto é baseado no exercício didático "Parrot Refactoring Kata", que simula a refatoração de uma classe com múltiplas responsabilidades e baixa coesão.
 
-This is a [Maven](https://maven.apache.org/) and a [Gradle](https://gradle.org/) project at the same time.
+## Como rodar os testes
 
-To install dependencies:
+```bash
+mvn test
+```
 
-    mvn verify
+## Melhorias Realizadas
+Questão 1 - Verificação Inicial
+Clonado o projeto original.
 
-The project uses [JUnit](https://junit.org/).
+Testes executados com sucesso usando JUnit.
 
-To run the test:
+## Questão 2 - Reestruturação de Métodos
+Método getSpeed() dividido em três métodos claros para cada tipo de papagaio.
 
-    mvn test
+## Questão 3 - Clareza com Variáveis
+Remoção de duplicações e uso de variáveis com nomes claros como baseSpeed, load, maxSpeed.
+
+## Questão 4 - Encapsulamento
+Criada a classe ParrotAttributes para agrupar os dados ao invés de múltiplos parâmetros soltos.
+
+## Questão 5 - Reorganização com Polimorfismo
+Transformado o design para orientação a objetos com subclasses específicas, eliminando switch e enum centralizador.
