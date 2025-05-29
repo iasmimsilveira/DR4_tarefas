@@ -27,15 +27,22 @@ public class Parrot {
     }
 
     private double getSpeedForAfrican() {
-        return getBaseSpeed() - getLoadFactor() * numberOfCoconuts;
+        double baseSpeed = getBaseSpeed();
+        double load = getLoadFactor() * numberOfCoconuts;
+        return baseSpeed - load;
     }
+
 
     private double getSpeedForNorwegianBlue() {
         if (isNailed) {
             return 0;
         }
-        return Math.min(24.0, voltage * getBaseSpeed());
+        double baseSpeed = getBaseSpeed();
+        double calculatedSpeed = voltage * baseSpeed;
+        double maxSpeed = 24.0;
+        return Math.min(maxSpeed, calculatedSpeed);
     }
+
 
     private double getBaseSpeed(double voltage) {
         return Math.min(24.0, voltage * getBaseSpeed());
